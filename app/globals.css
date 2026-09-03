@@ -76,19 +76,21 @@
 @utility container-nck {
   width: 100%;
   margin-inline: auto;
-  max-width: 1420px;
+  max-width: 1560px;
   padding-inline: 1rem;
   @variant sm { padding-inline: 1.25rem; }
   @variant md { padding-inline: 1.75rem; }
-  @variant xl { padding-inline: 2.25rem; }
+  @variant xl { padding-inline: 2rem; }
+  @variant 2xl { padding-inline: 2.25rem; }
 }
 
 @utility container-nck-wide {
   width: 100%;
   margin-inline: auto;
-  max-width: 1540px;
+  max-width: 1680px;
   padding-inline: 1rem;
   @variant md { padding-inline: 1.75rem; }
+  @variant xl { padding-inline: 2rem; }
 }
 
 @utility tech-backdrop {
@@ -107,7 +109,7 @@
 }
 
 @media (min-width: 1536px) {
-  .container-nck { max-width: 1460px; }
+  .container-nck { max-width: 1600px; }
 }
 
 @media (max-width: 767px) {
