@@ -3,12 +3,13 @@ import { Section, SectionHeading } from '@/components/brand-ui'
 
 export function HomeNetwork() {
   return (
-    <Section className="py-16 md:py-20 xl:py-24">
+    <Section className="py-12 md:py-16">
       <SectionHeading title="Mạng lưới đại lý & tuyến vận chuyển" description="Kết nối mạng lưới đại lý và đối tác vận chuyển trên nhiều thị trường." />
-      <div className="relative mx-auto mt-10 max-w-[1380px] overflow-hidden rounded-2xl border border-hairline bg-[#eaf6fd] shadow-[0_14px_40px_rgba(7,59,120,.08)]">
-        <div aria-hidden className="tech-grid absolute inset-0 opacity-[.08]" />
-        <div className="relative aspect-[2.2/1] min-h-[360px] w-full md:min-h-[430px]">
-          <Image src="/images/route-map.png" alt="Bản đồ minh hoạ mạng lưới tuyến vận chuyển của NCK Logistics" fill quality={100} sizes="1380px" className="object-contain p-3 md:p-6" />
+      <div className="relative mx-auto mt-8 max-w-[1340px] overflow-hidden rounded-xl border border-hairline bg-[#eaf6fd] shadow-[0_10px_30px_rgba(7,59,120,.07)]">
+        <div aria-hidden className="tech-grid absolute inset-0 opacity-[.06]" />
+        <div className="relative aspect-[2.7/1] min-h-[300px] w-full md:min-h-[350px]">
+          <Image src="/images/route-map.png" alt="Bản đồ minh hoạ mạng lưới tuyến vận chuyển của NCK Logistics" fill quality={100} sizes="1340px" className="object-cover object-center mix-blend-multiply" />
+          <div aria-hidden className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0)_0%,rgba(234,246,253,.10)_68%,rgba(234,246,253,.35)_100%)]" />
         </div>
       </div>
     </Section>
