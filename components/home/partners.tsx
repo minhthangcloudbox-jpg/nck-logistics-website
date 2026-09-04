@@ -1,26 +1,36 @@
 import { Section, SectionHeading } from '@/components/brand-ui'
 
 const carriers = [
-  { name: 'MAERSK', accent: '#42B0D5', text: '#0b315b', mark: '✦' },
-  { name: 'CMA CGM', accent: '#0C4DA2', text: '#0C4DA2', mark: '◜' },
-  { name: 'PIL', accent: '#E31E24', text: '#123E7C', mark: 'PIL' },
-  { name: 'MSC', accent: '#111111', text: '#111111', mark: 'msc' },
-  { name: 'CLF', accent: '#0D5EA6', text: '#0D5EA6', mark: 'CLF' },
-  { name: 'EVERGREEN', accent: '#009A44', text: '#008B3D', mark: 'E' },
+  { name: 'Maersk', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Maersk_Group_Logo.svg' },
+  { name: 'CMA CGM', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/CMA_CGM_logo.svg' },
+  { name: 'Pacific International Lines (PIL)', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/PIL_logo2.jpeg' },
+  { name: 'MSC', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Mediterranean_Shipping_Company_logo.svg' },
+  { name: 'Evergreen', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Evergreen_Logo.svg' },
+  { name: 'RCL', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Regional-container-lines-rcl.png' },
+  { name: 'Interasia Lines (IAL)', logo: 'https://trackingstatus.my/wp-content/uploads/2023/12/Interasia-Lines-Tracking.webp' },
+  { name: 'Ocean Network Express (ONE)', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Ocean_Network_Express_logo.svg' },
+  { name: 'Hapag-Lloyd', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Hapag-Lloyd.svg' },
 ]
 
 export function HomePartners() {
   return (
-    <Section tone="surface" className="py-12 md:py-14">
-      <SectionHeading title="Đối tác hãng tàu" />
-      <ul className="mx-auto mt-8 grid max-w-[1280px] grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-6">
+    <Section tone="surface" className="py-12 md:py-16">
+      <SectionHeading
+        title="Đối tác hãng tàu"
+        description="Kết nối linh hoạt với các hãng tàu và đối tác vận chuyển trên nhiều tuyến quốc tế."
+      />
+      <ul className="mx-auto mt-8 grid max-w-[1380px] grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         {carriers.map((carrier) => (
-          <li key={carrier.name} className="group relative flex h-20 items-center justify-center overflow-hidden rounded-lg border border-hairline bg-white px-4 shadow-[0_5px_16px_rgba(7,59,120,.05)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(7,59,120,.10)]">
-            <span aria-hidden className="absolute inset-x-0 top-0 h-[3px]" style={{ backgroundColor: carrier.accent }} />
-            <div className="flex items-center gap-2.5">
-              <span className="text-[18px] font-black leading-none" style={{ color: carrier.text }}>{carrier.mark}</span>
-              <span className="text-[16px] font-extrabold tracking-[0.01em]" style={{ color: carrier.text }}>{carrier.name}</span>
-            </div>
+          <li
+            key={carrier.name}
+            className="group flex h-24 items-center justify-center overflow-hidden rounded-xl border border-hairline bg-white px-5 shadow-[0_6px_20px_rgba(7,59,120,.06)] transition-all duration-300 hover:-translate-y-1 hover:border-sky/35 hover:shadow-[0_16px_38px_rgba(7,59,120,.12)] md:h-28"
+          >
+            <img
+              src={carrier.logo}
+              alt={`${carrier.name} logo`}
+              loading="lazy"
+              className="max-h-12 max-w-[165px] object-contain transition-transform duration-300 group-hover:scale-[1.035] md:max-h-14"
+            />
           </li>
         ))}
       </ul>
