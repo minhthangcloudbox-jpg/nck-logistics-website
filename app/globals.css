@@ -67,6 +67,7 @@
   html { scroll-behavior: smooth; }
   body {
     @apply bg-background text-muted-foreground;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
@@ -76,21 +77,21 @@
 @utility container-nck {
   width: 100%;
   margin-inline: auto;
-  max-width: min(94vw, 1920px);
-  padding-inline: 1rem;
-  @variant sm { padding-inline: 1.25rem; }
-  @variant md { padding-inline: 1.5rem; }
-  @variant xl { padding-inline: 1.75rem; }
-  @variant 2xl { padding-inline: 2rem; }
+  max-width: min(97vw, 2200px);
+  padding-inline: .75rem;
+  @variant sm { padding-inline: 1rem; }
+  @variant md { padding-inline: 1.25rem; }
+  @variant xl { padding-inline: 1.5rem; }
+  @variant 2xl { padding-inline: 1.75rem; }
 }
 
 @utility container-nck-wide {
   width: 100%;
   margin-inline: auto;
-  max-width: min(96vw, 2080px);
-  padding-inline: 1rem;
-  @variant md { padding-inline: 1.5rem; }
-  @variant xl { padding-inline: 1.75rem; }
+  max-width: min(98vw, 2400px);
+  padding-inline: .75rem;
+  @variant md { padding-inline: 1.25rem; }
+  @variant xl { padding-inline: 1.5rem; }
 }
 
 @utility tech-backdrop {
